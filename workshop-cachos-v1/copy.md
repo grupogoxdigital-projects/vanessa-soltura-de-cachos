@@ -1,11 +1,11 @@
-# Copy - Workshop Soltura de Cachos
+# Copy - Workshop Soltura de Cachos (Vanessa Barreto)
 
 ---
 
 ## Hero
 
 - Headline: Aprenda a Tecnica Profissional de Soltura de Cachos e Aumente o Faturamento do Seu Salao
-- Subheadline: Participe de um Workshop Completo por apenas R$47,00, onde voce vai aprender ao vivo uma das tecnicas mais procuradas pelas clientes que sofrem com o fator de encolhimento.
+- Subheadline: Participe do Workshop ao Vivo com Vanessa Barreto e aprenda uma das tecnicas mais procuradas pelas clientes que sofrem com o fator de encolhimento. Tudo isso por apenas R$47,00.
 - Bullets de confianca:
   - Aula ao vivo sem cortes
   - Tecnica pratica e rapida de aplicar
@@ -68,6 +68,20 @@
 
 ---
 
+## Secao: Quem e Vanessa Barreto
+
+- Titulo: Sua mentora neste workshop
+- Conteudo: Vanessa Barreto e cabeleireira com mais de 15 anos de experiencia e uma das maiores referencias do Brasil em cabelos cacheados, desprogressiva e permanente afro. Fundadora do grupo Vanessa Hair, ela ja formou centenas de cabeleireiras, muitas saindo do zero para se tornarem referencia na propria cidade.
+- Credenciais:
+  - Vencedora do Premio Tesoura de Ouro
+  - Eleita a profissional mais lembrada do Piaui
+  - Salao mais premiado e respeitado da regiao
+  - Tecnicas replicadas com sucesso em varios paises
+- Fechamento: Agora, Vanessa quer te ensinar na pratica como dominar a tecnica de soltura de cachos e transformar esse conhecimento em faturamento real no seu salao.
+- CTA: Quero Garantir Minha Vaga
+
+---
+
 ## Secao: Oferta
 
 - Titulo: Participe do Workshop por apenas R$47,00
@@ -87,3 +101,7 @@
 - Texto: Essa pode ser a oportunidade que voce precisava para aprender uma tecnica muito procurada e aumentar o faturamento do seu salao.
 - Chamada: Clique no botao abaixo e garanta sua vaga agora.
 - CTA: Quero Garantir Minha Vaga
+
+## Rodapé
+
+&copy; 2026 Vanessa Barreto - Soltura de Cachos. Todos os direitos reservados.
