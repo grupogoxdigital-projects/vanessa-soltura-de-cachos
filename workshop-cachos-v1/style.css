@@ -279,6 +279,66 @@ body {
   color: var(--texto-escuro);
 }
 
+.hero__status {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero__batches {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero__batch {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(145, 9, 30, 0.1);
+}
+
+.hero__batch--active {
+  background: var(--rosa-medio);
+  color: var(--vermelho);
+  border-color: rgba(145, 9, 30, 0.2);
+}
+
+.hero__batch--disabled {
+  background: rgba(42, 10, 16, 0.05);
+  color: rgba(42, 10, 16, 0.4);
+}
+
+.hero__progress-wrap {
+  width: 100%;
+  max-width: 300px;
+}
+
+.hero__progress-bar {
+  height: 6px;
+  background: rgba(145, 9, 30, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.hero__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rosa-medio), var(--vermelho));
+  border-radius: 10px;
+}
+
+.hero__progress-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .hero__trust svg {
   width: 20px;
   height: 20px;
@@ -990,7 +1050,8 @@ body {
   }
 
   .problema__imagem {
-    order: -1;
+    order: 2;
+    margin-top: 40px;
   }
 
   /* Vanessa */
@@ -999,9 +1060,13 @@ body {
     text-align: center;
   }
 
-  .vanessa__foto-placeholder {
-    max-width: 260px;
-    margin-inline: auto;
+  .vanessa__foto-wrap {
+    order: 2;
+    margin-top: 40px;
+  }
+
+  .vanessa__content {
+    order: 1;
   }
 
   .vanessa__badge {
@@ -1067,7 +1132,8 @@ body {
     gap: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding-bottom: 80px;
   }
 
   .hero__headline {
@@ -1077,21 +1143,37 @@ body {
 
   .hero__sub {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+  }
+
+  .hero__status {
+    margin-bottom: 24px;
+    align-items: center;
+  }
+
+  .hero__batches {
+    justify-content: center;
+  }
+
+  .hero__progress-wrap {
+    margin-inline: auto;
   }
 
   .hero__trust {
     display: none; /* Esconde trust no mobile para caber em 1 tela */
   }
 
-  .hero__photo-placeholder {
-    width: 100vw;
-    max-width: 500px;
-    margin-inline: -32px; /* Sangrar para as bordas */
-    aspect-ratio: 1/1;
-    border-radius: 0;
-    margin-top: 20px;
-    margin-bottom: 40px;
+  .hero__photo {
+    width: 100%;
+    max-width: 320px; /* Reduzido um pouco para caber na tela */
+    aspect-ratio: 3/4;
+    border-radius: 30px;
+    margin-top: 50px; /* Espaço maior entre botão e foto */
+    margin-bottom: 60px; /* Espaço maior abaixo da foto */
+  }
+
+  .hero__photo-wrap::before {
+    display: none; /* Simplifica no mobile para economizar espaço vertical */
   }
 
   .hero__badge {
