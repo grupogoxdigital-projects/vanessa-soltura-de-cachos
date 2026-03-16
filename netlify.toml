@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "workshop-cachos-v1"
 
 [dev]
   publish = "."
