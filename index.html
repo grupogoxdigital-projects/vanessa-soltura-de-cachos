@@ -3,98 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Soltura de Cachos - Vanessa Barreto</title>
+  <meta name="description" content="Aprenda a Tecnica Profissional de Soltura de Cachos com Vanessa Barreto e aumente o faturamento do seu salao. Workshop ao vivo por apenas R$47.">
 
-  <!-- SEO: Atualizar em /gerar-copy -->
-  <title>Titulo da Pagina</title>
-  <meta name="description" content="Descricao para SEO">
-
-  <!-- Open Graph: Atualizar em /gerar-copy -->
-  <meta property="og:title" content="Titulo da Pagina">
-  <meta property="og:description" content="Descricao para SEO">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
-
-  <!-- Favicon: Adicionar em /desenvolver -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-  <!-- FONTS: Substituir em /gerar-design (NUNCA usar fontes overused) -->
+  <!-- Preconnect Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Preconnect CDNs de bibliotecas -->
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="/style.css">
 
   <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- intl-tel-input -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Scripts: defer no head = browser descobre cedo, executa apos DOM parse -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
-  <!--
-    ESTRUTURA DA PAGINA
-    ===================
-    Gerada por /gerar-layout e construida por /desenvolver
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
 
-    REGRAS:
-    - Cada secao deve ter arquetipo + constraints unicos
-    - NUNCA repetir padroes entre secoes consecutivas
-    - NUNCA usar: hero centralizado generico, 3 cards, grid simetrico
-    - Manter font pairing consistente em toda pagina
-  -->
+      <!-- Lado esquerdo: conteúdo -->
+      <div class="hero__content">
+        <p class="hero__eyebrow">Workshop ao Vivo &bull; R$47,00</p>
+        <h1 class="hero__headline">
+          Aprenda a<br>
+          <span class="hero__headline--highlight">Soltura de Cachos</span><br>
+          Profissional e<br>
+          Aumente Seu<br>
+          Faturamento
+        </h1>
+        <p class="hero__sub">
+          Participe do Workshop ao Vivo com <strong>Vanessa Barreto</strong> e domine a tecnica mais procurada pelas clientes que sofrem com o fator de encolhimento.
+        </p>
+        <ul class="hero__trust">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Aula ao vivo sem cortes
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Tecnica pratica e rapida de aplicar
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Certificado de participacao
+          </li>
+        </ul>
+        <a href="#oferta" class="btn btn--primary">Quero Garantir Minha Vaga</a>
+      </div>
 
-  <main>
-    <!-- Conteudo gerado por /desenvolver -->
-  </main>
-
-  <!-- FORMULARIO (template) -->
-  <!--
-  <section id="contato" class="section">
-    <div class="container">
-      <h2>Titulo</h2>
-
-      <form name="contato" method="POST" action="/obrigado.html" data-netlify="true" netlify-honeypot="bot-field" data-form>
-        <input type="hidden" name="form-name" value="contato">
-        <p hidden><label>Nao preencha: <input name="bot-field"></label></p>
-
-        <div class="form-group">
-          <label class="form-label" for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" class="form-input" required autocomplete="name">
+      <!-- Lado direito: foto da especialista -->
+      <div class="hero__photo-wrap">
+        <img src="/.netlify/images?url=/images/v1.jpg&w=800&q=80" alt="Vanessa Barreto" class="hero__photo" width="380" height="506" loading="eager">
+        <!-- Badge flutuante -->
+        <div class="hero__badge">
+          <span class="hero__badge-price">R$47</span>
+          <span class="hero__badge-text">Workshop ao Vivo</span>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">E-mail</label>
-          <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
-        </div>
+    </div>
 
-        <div class="form-group">
-          <label class="form-label" for="telefone">WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" class="form-input" required autocomplete="tel">
-        </div>
-
-        <div class="form-feedback"></div>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
+    <!-- Divisor ondulado hero → escuro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#91091E"/>
+      </svg>
     </div>
   </section>
-  -->
 
-  <footer class="footer">
+  <!-- ===== SECAO: PROBLEMA ===== -->
+  <section class="section section--dark" id="problema">
     <div class="container">
-      <p>&copy; <span id="year"></span> Nome. Todos os direitos reservados.</p>
+      <div class="problema__grid">
+        <div class="problema__texto">
+          <p class="section__eyebrow section__eyebrow--light">Voce reconhece esse cenario?</p>
+          <h2 class="section__title section__title--light">
+            Suas clientes reclamam que o cabelo <em>encolhe demais?</em>
+          </h2>
+          <p class="section__intro section__intro--light">
+            O fator de encolhimento e um dos maiores problemas para quem tem cabelo cacheado. Muitas clientes saem do salao frustradas porque:
+          </p>
+          <ul class="problema__lista">
+            <li>
+              <span class="problema__icon" aria-hidden="true">&#x2715;</span>
+              Os cachos ficam encolhidos demais
+            </li>
+            <li>
+              <span class="problema__icon" aria-hidden="true">&#x2715;</span>
+              O cabelo perde definicao
+            </li>
+            <li>
+              <span class="problema__icon" aria-hidden="true">&#x2715;</span>
+              Ou pior... fica esticado e sem forma
+            </li>
+          </ul>
+          <p class="problema__agravante">
+            E isso acontece porque muitos profissionais ainda nao dominam a tecnica correta de soltura de cachos.
+          </p>
+          <p class="problema__virada">
+            A boa noticia e que isso tem solucao.
+          </p>
+          <a href="#oferta" class="btn btn--secondary">Quero Garantir Minha Vaga</a>
+        </div>
+
+        <div class="problema__imagem" data-aos="fade-up">
+          <img src="/.netlify/images?url=/images/v3.jpg&w=800&q=80" alt="Cabelo Cacheado" class="problema__foto" width="400" height="500" loading="lazy">
+        </div>
+      </div>
     </div>
+
+    <!-- Divisor ondulado escuro → claro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="#FFF0F2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: SOLUCAO ===== -->
+  <section class="section section--light" id="solucao">
+    <div class="solucao__ornamento" aria-hidden="true"></div>
+    <div class="container solucao__container">
+      <p class="section__eyebrow">A virada comeca aqui</p>
+      <h2 class="section__title" style="text-align:center;">
+        Uma tecnica simples que pode transformar seus resultados
+      </h2>
+      <p class="section__intro solucao__intro">
+        Neste workshop voce vai aprender uma tecnica profissional de soltura de cachos que:
+      </p>
+
+      <div class="solucao__cards">
+        <div class="solucao__card">
+          <span class="solucao__card-num" aria-hidden="true">1</span>
+          <svg class="solucao__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="solucao__card-text">Reduz o fator de encolhimento</p>
+        </div>
+        <div class="solucao__card">
+          <span class="solucao__card-num" aria-hidden="true">2</span>
+          <svg class="solucao__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="solucao__card-text">Mantem os cachos definidos</p>
+        </div>
+        <div class="solucao__card">
+          <span class="solucao__card-num" aria-hidden="true">3</span>
+          <svg class="solucao__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="solucao__card-text">Valoriza o resultado final do cabelo</p>
+        </div>
+        <div class="solucao__card">
+          <span class="solucao__card-num" aria-hidden="true">4</span>
+          <svg class="solucao__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="solucao__card-text">Aumenta a satisfacao das suas clientes</p>
+        </div>
+      </div>
+
+      <p class="solucao__contexto">
+        Esse e um servico muito procurado nos saloes atualmente. E quem domina essa tecnica consegue se destacar e faturar mais.
+      </p>
+      <div class="solucao__cta">
+        <a href="#oferta" class="btn btn--primary">Quero Garantir Minha Vaga</a>
+      </div>
+    </div>
+
+    <!-- Divisor ondulado claro → escuro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#91091E"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: O QUE VAI APRENDER ===== -->
+  <section class="section section--dark" id="aprender">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light" style="text-align:center;">O que voce vai aprender</p>
+      <h2 class="section__title section__title--light" style="text-align:center; margin-bottom:48px;">
+        No workshop voce vai aprender:
+      </h2>
+
+      <div class="bento__grid">
+        <div class="bento__cell bento__cell--large">
+          <span class="bento__num" aria-hidden="true">1</span>
+          <p class="bento__text">Como realizar soltura de cachos da forma correta</p>
+        </div>
+        <div class="bento__cell bento__cell--small">
+          <span class="bento__num" aria-hidden="true">2</span>
+          <p class="bento__text">O erro que faz o cabelo ficar liso ao inves de cacheado</p>
+        </div>
+        <div class="bento__cell bento__cell--small">
+          <span class="bento__num" aria-hidden="true">3</span>
+          <p class="bento__text">Como entregar um resultado seguro e profissional</p>
+        </div>
+        <div class="bento__cell bento__cell--large">
+          <span class="bento__num" aria-hidden="true">4</span>
+          <p class="bento__text">Como transformar esse servico em uma nova fonte de faturamento no seu salao</p>
+        </div>
+      </div>
+
+      <p class="bento__fechamento">
+        Tudo isso em uma aula completa ao vivo, sem cortes e sem pausas.
+      </p>
+      <div style="text-align:center;">
+        <a href="#oferta" class="btn btn--secondary">Quero Garantir Minha Vaga</a>
+      </div>
+    </div>
+
+    <!-- Divisor ondulado escuro → claro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="#FFF0F2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: PARA QUEM E ===== -->
+  <section class="section section--light" id="para-quem">
+    <div class="container">
+      <p class="section__eyebrow" style="text-align:center;">Esse workshop e para voce se...</p>
+      <h2 class="section__title" style="text-align:center;">
+        Esse workshop e ideal para:
+      </h2>
+
+      <!-- Linha decorativa -->
+      <div class="paraquem__linha" aria-hidden="true"></div>
+
+      <div class="paraquem__cards">
+        <div class="paraquem__card">
+          <span class="paraquem__num" aria-hidden="true">1</span>
+          <p class="paraquem__text">Profissionais que trabalham com cabelos cacheados</p>
+        </div>
+        <div class="paraquem__card">
+          <span class="paraquem__num" aria-hidden="true">2</span>
+          <p class="paraquem__text">Cabeleireiras que querem aprender uma tecnica nova</p>
+        </div>
+        <div class="paraquem__card">
+          <span class="paraquem__num" aria-hidden="true">3</span>
+          <p class="paraquem__text">Quem quer aumentar o faturamento do salao</p>
+        </div>
+        <div class="paraquem__card">
+          <span class="paraquem__num" aria-hidden="true">4</span>
+          <p class="paraquem__text">Profissionais que querem mais seguranca na soltura de cachos</p>
+        </div>
+      </div>
+
+      <p class="paraquem__fechamento">
+        Se voce quer melhorar seus resultados e se destacar, esse workshop e para voce.
+      </p>
+      <div style="text-align:center;">
+        <a href="#oferta" class="btn btn--primary">Quero Garantir Minha Vaga</a>
+      </div>
+    </div>
+
+    <!-- Divisor ondulado claro → escuro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#91091E"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: QUEM E VANESSA ===== -->
+  <section class="section section--dark" id="vanessa">
+    <div class="container">
+      <div class="vanessa__grid">
+
+        <!-- Foto placeholder (esquerda) -->
+        <div class="vanessa__foto-wrap" data-aos="fade-up">
+          <img src="/.netlify/images?url=/images/v2.jpg&w=800&q=80" alt="Vanessa Barreto" class="vanessa__foto" width="360" height="480" loading="lazy">
+        </div>
+
+        <!-- Conteudo textual (direita) -->
+        <div class="vanessa__content">
+          <p class="section__eyebrow section__eyebrow--light">Quem vai te ensinar</p>
+          <h2 class="section__title section__title--light">
+            Sua mentora neste workshop
+          </h2>
+          <p class="vanessa__bio">
+            Vanessa Barreto e cabeleireira com mais de 15 anos de experiencia e uma das maiores referencias do Brasil em cabelos cacheados, desprogressiva e permanente afro. Fundadora do grupo Vanessa Hair, ela ja formou centenas de cabeleireiras, muitas saindo do zero para se tornarem referencia na propria cidade.
+          </p>
+
+          <div class="vanessa__badges">
+            <div class="vanessa__badge">
+              <svg class="vanessa__star" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1L9.8 5.6L14.7 6.1L11.2 9.3L12.3 14.1L8 11.6L3.7 14.1L4.8 9.3L1.3 6.1L6.2 5.6L8 1Z" fill="#F5B8C4"/></svg>
+              <span>Vencedora do Premio Tesoura de Ouro</span>
+            </div>
+            <div class="vanessa__badge">
+              <svg class="vanessa__star" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1L9.8 5.6L14.7 6.1L11.2 9.3L12.3 14.1L8 11.6L3.7 14.1L4.8 9.3L1.3 6.1L6.2 5.6L8 1Z" fill="#F5B8C4"/></svg>
+              <span>Eleita a profissional mais lembrada do Piaui</span>
+            </div>
+            <div class="vanessa__badge">
+              <svg class="vanessa__star" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1L9.8 5.6L14.7 6.1L11.2 9.3L12.3 14.1L8 11.6L3.7 14.1L4.8 9.3L1.3 6.1L6.2 5.6L8 1Z" fill="#F5B8C4"/></svg>
+              <span>Salao mais premiado e respeitado da regiao</span>
+            </div>
+            <div class="vanessa__badge">
+              <svg class="vanessa__star" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1L9.8 5.6L14.7 6.1L11.2 9.3L12.3 14.1L8 11.6L3.7 14.1L4.8 9.3L1.3 6.1L6.2 5.6L8 1Z" fill="#F5B8C4"/></svg>
+              <span>Tecnicas replicadas com sucesso em varios paises</span>
+            </div>
+          </div>
+
+          <p class="vanessa__fechamento">
+            Agora, Vanessa quer te ensinar na pratica como dominar a tecnica de soltura de cachos e transformar esse conhecimento em faturamento real no seu salao.
+          </p>
+          <a href="#oferta" class="btn btn--secondary">Quero Garantir Minha Vaga</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Divisor ondulado escuro → claro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="#FFF0F2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: OFERTA / INVESTIMENTO ===== -->
+  <section class="section section--light" id="oferta">
+    <!-- Ornamento radial de fundo -->
+    <div class="oferta__ornamento" aria-hidden="true"></div>
+
+    <div class="container oferta__container">
+      <p class="section__eyebrow" style="text-align:center;">Investimento</p>
+      <h2 class="oferta__titulo">
+        Participe do Workshop por apenas
+      </h2>
+
+      <!-- Card de oferta -->
+      <div class="oferta__card">
+        <!-- Header do card -->
+        <div class="oferta__card-header">
+          <p class="oferta__preco">R$47<span class="oferta__preco-cents">,00</span></p>
+          <p class="oferta__subpreco">pagamento unico</p>
+        </div>
+        <!-- Corpo do card -->
+        <div class="oferta__card-body">
+          <p class="oferta__lista-titulo">Voce tera acesso a:</p>
+          <ul class="oferta__lista">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Workshop completo ao vivo
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Tecnica profissional de soltura de cachos
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Conteudo pratico e direto ao ponto
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#91091E"/><path d="M5.5 10.5L8.5 13.5L14.5 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Certificado de participacao
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="oferta__escassez">
+        As vagas sao limitadas.
+      </p>
+      <div style="text-align:center;">
+        <a href="#oferta" class="btn btn--primary">Quero Participar do Workshop</a>
+      </div>
+    </div>
+
+    <!-- Divisor ondulado claro → escuro -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#91091E"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SECAO: CTA FINAL ===== -->
+  <section class="section section--dark" id="cta-final">
+    <div class="container ctafinal__container">
+      <p class="section__eyebrow section__eyebrow--light">Nao perca essa chance</p>
+      <p class="ctafinal__texto">
+        Essa pode ser a oportunidade que voce precisava para aprender uma tecnica muito procurada e aumentar o faturamento do seu salao.
+      </p>
+      <p class="ctafinal__chamada">
+        Clique no botao abaixo e garanta sua vaga agora.
+      </p>
+      <div>
+        <a href="#oferta" class="btn btn--secondary ctafinal__btn">Quero Garantir Minha Vaga</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RODAPE ===== -->
+  <footer class="rodape">
+    <p>&copy; 2026 Vanessa Barreto - Soltura de Cachos. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 60,
+      disableMutationObserver: true
+    });
+  </script>
 </body>
 </html>
