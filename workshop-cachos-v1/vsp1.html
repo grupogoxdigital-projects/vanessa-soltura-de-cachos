@@ -112,30 +112,46 @@
     .vsp-video-placeholder {
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-      color: white;
-      font-size: 0.9rem;
       position: relative;
     }
 
-    .vsp-video-placeholder::before {
-      content: '';
+    .vsp-play-overlay {
       position: absolute;
-      width: 60px;
-      height: 60px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .vsp-play-overlay:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .vsp-play-button {
+      width: 70px;
+      height: 70px;
       background: var(--vsp-accent);
       border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      filter: blur(0);
+      align-items: center;
+      box-shadow: 0 0 30px rgba(145, 9, 30, 0.6);
       transition: transform 0.3s ease;
     }
 
-    .vsp-video-placeholder:hover::before {
+    .vsp-play-button svg {
+      width: 35px;
+      fill: white;
+      margin-left: 4px;
+    }
+
+    .vsp-play-overlay:hover .vsp-play-button {
       transform: scale(1.1);
     }
 
@@ -239,19 +255,23 @@
         certificado incluso.
       </p>
 
-      <!-- Vídeo Container -->
-      <div class="vsp-video-container" data-aos="zoom-in">
+      <!-- Vídeo Container com Preview Inteligente -->
+      <div id="vsp-video" class="vsp-video-container" onclick="loadVSPVideo()">
         <div class="vsp-video-placeholder">
-          <!-- O player de vídeo será inserido aqui -->
-          <span>O vídeo será carregado aqui...</span>
-          <svg style="position: absolute; width: 30px; fill: white;" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
+          <img src="https://img.youtube.com/vi/q3o6vOxoRY4/maxresdefault.jpg" alt="Preview Vídeo Vanessa Barreto"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div class="vsp-play-overlay">
+            <div class="vsp-play-button">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="vsp-cta-wrap" data-aos="fade-up">
+      <div class="vsp-cta-wrap">
         <a href="https://pay.hotmart.com/L104762066L?checkoutMode=10" class="btn btn--primary btn--vsp">
           QUERO GARANTIR MINHA VAGA NO LOTE PROMOCIONAL
         </a>
@@ -274,6 +294,20 @@
       once: true,
       disableMutationObserver: true
     });
+
+    // Função para carregar o vídeo apenas sob demanda (melhor performance e satisfaz a prévia)
+    function loadVSPVideo() {
+      const container = document.getElementById('vsp-video');
+      container.innerHTML = `
+        <iframe width="100%" height="100%" 
+        src="https://www.youtube.com/embed/q3o6vOxoRY4?autoplay=1&rel=0&controls=0&modestbranding=1&showinfo=0&disablekb=1&iv_load_policy=3" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen 
+        style="position: absolute; top: 0; left: 0;"></iframe>
+      `;
+      container.removeAttribute('onclick');
+    }
   </script>
 </body>
 
