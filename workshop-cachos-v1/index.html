@@ -30,6 +30,120 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NBTK3XFH');</script>
   <!-- End Google Tag Manager -->
+
+  <style>
+    /* Estilos para o Vídeo de Destaque */
+    .vsp-video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 20px;
+      box-shadow: 0 20px 48px rgba(145, 9, 30, 0.22);
+      position: relative;
+      overflow: hidden;
+      border: 4px solid var(--branco);
+    }
+
+    .vsp-video-placeholder {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .vsp-play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .vsp-play-overlay:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .vsp-play-button {
+      width: 80px;
+      height: 80px;
+      background: var(--vermelho);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(145, 9, 30, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .vsp-play-button svg {
+      width: 40px;
+      fill: white;
+      margin-left: 4px;
+    }
+
+    .vsp-play-overlay:hover .vsp-play-button {
+      transform: scale(1.1);
+    }
+
+    /* Ajuste para imagem não ficar cortada e sem sobras */
+    .problema__foto {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: auto !important;
+      object-fit: cover !important; /* Mudar para cover para preencher se necessário, ou contain se preferir original */
+      border-radius: 24px !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22) !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    /* Video integrado na Hero */
+    .hero__video-wrap {
+      width: 100%;
+      margin-top: -40px; /* Ajuste para aproximar do conteúdo da hero */
+      margin-bottom: 60px;
+      padding-bottom: 80px; /* Espaço para a onda */
+      position: relative;
+      z-index: 5;
+    }
+
+    .vsp-video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 20px;
+      box-shadow: 0 20px 48px rgba(145, 9, 30, 0.22);
+      position: relative;
+      overflow: hidden;
+      border: 4px solid var(--branco);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero__video-wrap {
+        margin-top: 0;
+        padding-inline: 15px !important;
+      }
+      .vsp-video-container {
+        border-radius: 16px;
+      }
+      .vsp-play-button {
+        width: 60px;
+        height: 60px;
+      }
+      .vsp-play-button svg {
+        width: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -114,6 +228,24 @@
         </div>
       </div>
 
+      </div>
+    </div>
+
+    <!-- Vídeo integrado -->
+    <div class="hero__video-wrap" data-aos="fade-up">
+      <div class="vsp-video-container">
+        <div id="vsp-video" class="vsp-video-placeholder" onclick="loadVSPVideo()">
+          <img src="https://img.youtube.com/vi/q3o6vOxoRY4/maxresdefault.jpg" alt="Preview Vídeo Vanessa Barreto"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div class="vsp-play-overlay">
+            <div class="vsp-play-button">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Divisor ondulado hero → escuro -->
@@ -161,7 +293,7 @@
         </div>
 
         <div class="problema__imagem" data-aos="fade-up">
-          <img src="/.netlify/images?url=/images/v3.jpg&w=800&q=80" alt="Cabelo Cacheado" class="problema__foto"
+          <img src="/.netlify/images?url=/images/anteedepois.webp&w=800&q=80" alt="Antes e Depois Soltura de Cachos" class="problema__foto"
             width="400" height="500" loading="lazy">
         </div>
       </div>
@@ -738,6 +870,20 @@
         }
       });
     });
+
+    // Função para carregar o vídeo apenas sob demanda
+    function loadVSPVideo() {
+      const container = document.getElementById('vsp-video');
+      container.innerHTML = `
+        <iframe width="100%" height="100%" 
+        src="https://www.youtube.com/embed/q3o6vOxoRY4?autoplay=1&rel=0&controls=0&modestbranding=1&showinfo=0&disablekb=1&iv_load_policy=3" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen 
+        style="position: absolute; top: 0; left: 0;"></iframe>
+      `;
+      container.removeAttribute('onclick');
+    }
   </script>
 </body>
 
