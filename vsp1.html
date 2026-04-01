@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSP - Workshop Soltura de Cachos - Vanessa Barreto</title>
+  <meta name="description"
+    content="Aprenda em 1 Dia a Técnica que Reduz o Encolhimento em até 70% e Aumente seu Faturamento em 3x com Vanessa Barreto.">
+
+  <!-- Preconnect Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos Globais -->
+  <link rel="stylesheet" href="/style.css?v=1.1">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <style>
+    /* Estilos Específicos para a VSP para garantir o 100vh e evitar conflitos */
+    :root {
+      --vsp-bg: #FFF0F2;
+      --vsp-text: #2D1216;
+      --vsp-accent: #91091E;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      background-color: var(--vsp-bg);
+      color: var(--vsp-text);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .vsp-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100dvh;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Top Bar */
+    .top-bar-vsp {
+      background-color: var(--vsp-accent);
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      z-index: 10;
+    }
+
+    /* Main Content Area */
+    .vsp-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      gap: 1.5rem;
+      /* Ajustado para mobile */
+      z-index: 5;
+    }
+
+    .vsp-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.4rem, 4.5vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+      color: var(--vsp-accent);
+    }
+
+    .vsp-subheadline {
+      font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+      max-width: 700px;
+      margin: 0;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+
+    /* Video Container com glow */
+    .vsp-video-container {
+      width: 100%;
+      max-width: 680px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(145, 9, 30, 0.2);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid white;
+    }
+
+    /* Simulação do Player (iframe ocupará este espaço) */
+    .vsp-video-placeholder {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .vsp-play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .vsp-play-overlay:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .vsp-play-button {
+      width: 70px;
+      height: 70px;
+      background: var(--vsp-accent);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(145, 9, 30, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .vsp-play-button svg {
+      width: 35px;
+      fill: white;
+      margin-left: 4px;
+    }
+
+    .vsp-play-overlay:hover .vsp-play-button {
+      transform: scale(1.1);
+    }
+
+    /* CTA Section */
+    .vsp-cta-wrap {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn--vsp {
+      padding: 18px 30px;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      border-radius: 50px;
+      animation: pulse-vsp 2s infinite;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @keyframes pulse-vsp {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(145, 9, 30, 0.7);
+      }
+
+      70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 15px rgba(145, 9, 30, 0);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(145, 9, 30, 0);
+      }
+    }
+
+    .vsp-price-info {
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    .vsp-footer {
+      padding: 15px;
+      font-size: 0.75rem;
+      text-align: center;
+      opacity: 0.7;
+      border-top: 1px solid rgba(145, 9, 30, 0.1);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Ajustes específicos para telas muito pequenas */
+    @media (max-height: 600px) {
+      .vsp-main {
+        gap: 1rem;
+        padding: 15px;
+      }
+
+      .vsp-headline {
+        font-size: 1.2rem;
+      }
+
+      .vsp-subheadline {
+        display: none;
+      }
+
+      /* Oculta subheadline em telas minúsculas para caber vídeo e CTA */
+      .vsp-video-container {
+        max-width: 80%;
+      }
+
+      .btn--vsp {
+        padding: 12px 20px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBTK3XFH');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBTK3XFH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="vsp-wrapper">
+    <!-- Top Bar -->
+    <div class="top-bar-vsp">🔥 ÚLTIMAS VAGAS DO LOTE PROMOCIONAL</div>
+
+    <!-- Main Content -->
+    <main class="vsp-main">
+      <h1 class="vsp-headline">
+        Aprenda em 1 Dia a Técnica que Reduz o Encolhimento em até 70% e Aumente seu Faturamento em 3x
+      </h1>
+
+      <p class="vsp-subheadline">
+        Você vai dominar a Soltura de Cachos Profissional com Vanessa Barreto em um Workshop ao Vivo, prático e com
+        certificado incluso.
+      </p>
+
+      <!-- Vídeo Container com Preview Inteligente -->
+      <div id="vsp-video" class="vsp-video-container" onclick="loadVSPVideo()">
+        <div class="vsp-video-placeholder">
+          <img src="https://img.youtube.com/vi/q3o6vOxoRY4/maxresdefault.jpg" alt="Preview Vídeo Vanessa Barreto"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+          <div class="vsp-play-overlay">
+            <div class="vsp-play-button">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="vsp-cta-wrap">
+        <a href="https://pay.hotmart.com/L104762066L?checkoutMode=10" class="btn btn--primary btn--vsp">
+          QUERO GARANTIR MINHA VAGA NO LOTE PROMOCIONAL
+        </a>
+        <p class="vsp-price-info">Acesso imediato por apenas R$57,00</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="vsp-footer">
+      <p>&copy; 2026 Vanessa Barreto - Soltura de Cachos. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Inicialização do AOS com as configurações de performance solicitadas
+    AOS.init({
+      duration: 800,
+      once: true,
+      disableMutationObserver: true
+    });
+
+    // Função para carregar o vídeo apenas sob demanda (melhor performance e satisfaz a prévia)
+    function loadVSPVideo() {
+      const container = document.getElementById('vsp-video');
+      container.innerHTML = `
+        <iframe width="100%" height="100%" 
+        src="https://www.youtube.com/embed/q3o6vOxoRY4?autoplay=1&rel=0&controls=0&modestbranding=1&showinfo=0&disablekb=1&iv_load_policy=3" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen 
+        style="position: absolute; top: 0; left: 0;"></iframe>
+      `;
+      container.removeAttribute('onclick');
+    }
+  </script>
+</body>
+
+</html>
