@@ -1,8 +1,8 @@
 [build]
-  publish = "workshop-cachos-v1"
+  publish = "."
 
 [dev]
-  publish = "workshop-cachos-v1"
+  publish = "."
   port = 8888
   framework = "#static"
   autoLaunch = false
