@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Soltura de Cachos | Workshop ao Vivo — Vanessa Barreto</title>
-  <meta name="description" content="Workshop ao vivo de soltura de cachos profissional com Vanessa Barreto. Domine a técnica mais procurada e aumente seu faturamento. De R$157 por R$67.">
+  <meta name="description" content="Workshop ao vivo de soltura de cachos profissional com Vanessa Barreto. Domine a técnica mais procurada e aumente seu faturamento. De R$157 por R$57.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Soltura de Cachos | Workshop ao Vivo — Vanessa Barreto">
-  <meta property="og:description" content="Workshop ao vivo de soltura de cachos profissional. Domine a técnica e aumente seu faturamento. De R$157 por R$67.">
+  <meta property="og:description" content="Workshop ao vivo de soltura de cachos profissional. Domine a técnica e aumente seu faturamento. De R$157 por R$57.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="">
+  <meta property="og:image" content="/.netlify/images?url=/images/hero-desktop.webp&w=1200&q=80">
   <meta property="og:url" content="">
 
   <!-- Favicon -->
@@ -27,14 +27,20 @@
   <noscript><link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"></noscript>
   <link rel="preconnect" href="https://unpkg.com">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css?v=3.1">
+  <script>
+    if (localStorage.getItem('force_update') !== '3.1') {
+      localStorage.setItem('force_update', '3.1');
+      location.reload(true);
+    }
+  </script>
 
 </head>
 <body>
 
   <header class="top-bar">
     <div class="container top-bar-inner">
-      <span>13 de Abril &bull; Workshop ao Vivo &bull; <s>de R$157,00</s> por <strong>R$67,00</strong></span>
+      <span>13 de Abril &bull; Workshop ao Vivo &bull; <s>de R$157,00</s> por <strong>R$57,00</strong></span>
     </div>
   </header>
 
@@ -46,40 +52,40 @@
     <section class="hero">
       <div class="hero-bg">
         <picture>
-          <source media="(max-width: 767px)" srcset="hero-mobile.webp" type="image/webp">
-          <source media="(min-width: 768px)" srcset="hero-desktop.webp" type="image/webp">
-          <img src="hero-desktop.webp" alt="" width="1920" height="1080" decoding="async" fetchpriority="high" aria-hidden="true">
+          <source media="(max-width: 767px)" srcset="/.netlify/images?url=/images/hero-mobile.webp&w=800&q=80" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/.netlify/images?url=/images/hero-desktop.webp&w=1920&q=80" type="image/webp">
+          <img src="/.netlify/images?url=/images/hero-desktop.webp&w=1920&q=80" alt="" width="1920" height="1080" decoding="async" fetchpriority="high" aria-hidden="true" loading="eager">
         </picture>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content">
-        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        <h1 class="hero-title">
           <span class="hero-title-main">Aprenda a <span class="hero-title-accent">Soltura de Cachos</span></span>
           <span class="hero-title-main">Profissional e Aumente Seu</span>
           <span class="hero-title-highlight">Faturamento</span>
         </h1>
 
-        <p class="hero-sub" data-aos="fade-up" data-aos-delay="150">
+        <p class="hero-sub">
           Participe do Workshop ao Vivo com <strong>Vanessa Barreto</strong> e domine a técnica mais procurada pelas clientes que sofrem com o fator de encolhimento.
         </p>
 
-        <div class="hero-price" data-aos="fade-up" data-aos-delay="300">
-          <span class="hero-price-inline">Lote 2 — <strong>R$ 67</strong></span>
-          <span class="hero-price-value">R$ <strong>67</strong></span>
-          <span class="hero-price-label">Lote 2</span>
+        <div class="hero-price">
+          <span class="hero-price-inline">Primeiro Lote — <strong>R$ 57</strong></span>
+          <span class="hero-price-value">R$ <strong>57</strong></span>
+          <span class="hero-price-label">Primeiro lote</span>
         </div>
 
-        <div class="lot-progress" data-aos="fade-up" data-aos-delay="350">
+        <div class="lot-progress">
           <div class="lot-progress-header">
-            <span class="lot-progress-label">Lote 2 — <strong>96% preenchido</strong></span>
-            <span class="lot-progress-next">Lote 3: R$ 97,00</span>
+            <span class="lot-progress-label">Lote 1 — <strong>95% preenchido</strong></span>
+            <span class="lot-progress-next">Lote 2: R$ 97,00</span>
           </div>
-          <div class="lot-progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" aria-label="96% das vagas do lote 2 preenchidas">
+          <div class="lot-progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="95% das vagas do lote 1 preenchidas">
             <div class="lot-progress-fill"></div>
           </div>
         </div>
 
-        <a href="#precos" class="btn-primary hero-cta" data-aos="fade-up" data-aos-delay="400">
+        <a href="#precos" class="btn-primary hero-cta">
           DOMINAR SOLTURA DE CACHOS
         </a>
       </div>
@@ -117,7 +123,7 @@
         <div class="proof-result" data-aos="fade-up">
           <p class="proof-result-label">Veja o resultado real da técnica:</p>
           <div class="proof-result-img">
-            <img src="antes-depois.webp" alt="Antes e depois da soltura de cachos — resultado real da técnica" width="567" height="1008" loading="lazy" decoding="async">
+            <img src="/.netlify/images?url=/images/antes-depois.webp&w=800&q=80" alt="Antes e depois da soltura de cachos — resultado real da técnica" width="567" height="1008" loading="lazy" decoding="async">
             <div class="proof-result-tags">
               <span class="proof-tag proof-tag--antes">Antes</span>
               <span class="proof-tag proof-tag--depois">Depois</span>
@@ -229,7 +235,7 @@
         <p class="about-overline" data-aos="fade-up">QUEM VAI TE ENSINAR</p>
         <div class="about-wrapper" data-aos="fade-up">
           <div class="about-foto">
-            <img src="hero-mobile.webp" alt="Vanessa Barreto - Especialista em Soltura de Cachos" loading="lazy" width="480" height="600" decoding="async">
+            <img src="/.netlify/images?url=/images/hero-mobile.webp&w=480&q=80" alt="Vanessa Barreto - Especialista em Soltura de Cachos" loading="lazy" width="480" height="600" decoding="async">
           </div>
           <div class="about-text">
             <h2>Sua mentora neste <span class="about-highlight-inline">workshop</span></h2>
@@ -309,23 +315,23 @@
         <h2 class="section-heading" data-aos="fade-up">PARTICIPE DO WORKSHOP POR APENAS</h2>
 
         <div class="precos-grid" data-aos="fade-up" data-aos-delay="100">
-          <!-- LOTE 2 - ATIVO -->
+          <!-- LOTE 1 - ATIVO -->
           <div class="preco-card preco-card--ativo">
             <div class="preco-destaque">VAGAS LIMITADAS</div>
             <div class="preco-header">
-              <span class="preco-lote">LOTE 2</span>
+              <span class="preco-lote">LOTE 1</span>
               <span class="preco-status preco-status--on">Disponível</span>
             </div>
             <div class="preco-valor">
               <span class="preco-de">De R$ 157</span>
-              <span class="preco-por">R$ 67</span>
+              <span class="preco-por">R$ 57</span>
             </div>
             <div class="preco-date">
               <span>13 DE ABRIL</span>
             </div>
             <div class="preco-progress">
-              <div class="preco-progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" aria-label="96% das vagas vendidas"></div>
-              <span class="preco-progress-text">96% vendido</span>
+              <div class="preco-progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="95% das vagas vendidas"></div>
+              <span class="preco-progress-text">95% vendido</span>
             </div>
             <ul class="preco-features">
               <li>Workshop completo ao vivo</li>
@@ -336,10 +342,10 @@
             <a href="https://pay.hotmart.com/L104762066L?checkoutMode=10" class="btn-primary btn-preco" target="_blank" rel="noopener noreferrer">QUERO AGORA <span class="sr-only">(abre em nova aba)</span></a>
           </div>
 
-          <!-- LOTE 3 - EM BREVE -->
+          <!-- LOTE 2 - EM BREVE -->
           <div class="preco-card preco-card--breve">
             <div class="preco-header">
-              <span class="preco-lote">LOTE 3</span>
+              <span class="preco-lote">LOTE 2</span>
               <span class="preco-status preco-status--off">Em Breve</span>
             </div>
             <div class="preco-valor">
@@ -442,8 +448,8 @@
         </p>
         <div class="final-cta-price" data-aos="zoom-in" data-aos-delay="200">
           <span class="final-cta-price-old">De R$ 157</span>
-          <span class="final-cta-price-new">R$ <strong>67</strong></span>
-          <span class="final-cta-price-badge">2&ordm; LOTE</span>
+          <span class="final-cta-price-new">R$ <strong>57</strong></span>
+          <span class="final-cta-price-badge">1&ordm; LOTE</span>
         </div>
         <a href="#precos" class="btn-primary btn-large" data-aos="fade-up" data-aos-delay="300">
           QUERO DOMINAR A SOLTURA DE CACHOS
@@ -464,7 +470,7 @@
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 
   <!-- Meta Pixel -->
   <script>
