@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscricao Confirmada - Workshop Soltura de Cachos</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Preconnect Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css?v=3.1">
+  <script>
+    if (localStorage.getItem('force_update') !== '3.1') {
+      localStorage.setItem('force_update', '3.1');
+      location.reload(true);
+    }
+  </script>
+
+  <style>
+    :root {
+      --thanks-gap: clamp(6px, 1.5vh, 12px);
+    }
+
+    body {
+      background-color: var(--rosa-claro);
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      height: 100dvh;
+    }
+
+    .thanks {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+    }
+
+    .thanks__container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: clamp(15px, 4vh, 30px);
+      border-radius: 20px;
+      border: 1px solid rgba(145, 9, 30, 0.1);
+      box-shadow: 0 10px 30px rgba(145, 9, 30, 0.05);
+      z-index: 2;
+    }
+
+    .thanks__headline {
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 4vh, 32px);
+      color: var(--vermelho);
+      margin-bottom: var(--thanks-gap);
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .thanks__headline em {
+      font-style: italic;
+      color: var(--vermelho-prof);
+      display: block;
+    }
+
+    .thanks__text {
+      font-size: clamp(13px, 1.6vh, 15px);
+      line-height: 1.35;
+      color: var(--texto-escuro);
+      margin-bottom: var(--thanks-gap);
+    }
+
+    .thanks__step {
+      font-weight: 800;
+      color: var(--vermelho);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: clamp(11px, 1.2vh, 12px);
+      margin-top: var(--thanks-gap);
+      margin-bottom: 4px;
+    }
+
+    .thanks__cta-box {
+      margin: var(--thanks-gap) 0;
+    }
+
+    .btn {
+      padding: clamp(12px, 1.8vh, 16px) clamp(20px, 4vw, 32px) !important;
+      font-size: clamp(14px, 1.6vh, 16px) !important;
+    }
+
+    .thanks__warning {
+      background: var(--vermelho);
+      padding: clamp(6px, 1vh, 10px) 15px;
+      border-radius: 50px;
+      display: inline-block;
+      font-size: clamp(11px, 1.3vh, 12px);
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: var(--thanks-gap);
+    }
+
+    .thanks__footer {
+      font-size: clamp(11px, 1.3vh, 12px);
+      color: rgba(42, 10, 16, 0.6);
+      margin-top: 4px;
+    }
+
+    .thanks__footer strong {
+      color: var(--vermelho);
+      display: block;
+      margin-top: 2px;
+      font-size: clamp(13px, 1.6vh, 15px);
+    }
+
+    /* Ornamentos */
+    .thanks::before, .thanks::after {
+      content: '';
+      position: absolute;
+      width: 50vh;
+      height: 50vh;
+      filter: blur(100px);
+      border-radius: 50%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .thanks::before { top: -10%; right: -10%; background: var(--rosa-medio); opacity: 0.2; }
+    .thanks::after { bottom: -10%; left: -10%; background: var(--vermelho); opacity: 0.1; }
+
+    @media (max-width: 480px) {
+      .thanks__container { padding: 20px 15px; }
+      .btn { width: 100%; }
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBTK3XFH');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBTK3XFH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <main class="thanks">
+    <div class="thanks__container">
+      <h1 class="thanks__headline">
+        Inscrição Confirmada!
+        <em>Workshop Soltura de Cachos</em>
+      </h1>
+
+      <p class="thanks__text">
+        Parabéns! Sua vaga está garantida. Você agora faz parte do grupo de profissionais que vão dominar a técnica de soltura de cachos.
+      </p>
+
+      <p class="thanks__step">Próximo Passo</p>
+      
+      <p class="thanks__text">
+        É obrigatório entrar no grupo oficial do WhatsApp. É por lá que enviaremos o link da aula ao vivo e todos os materiais.
+      </p>
+
+      <div class="thanks__cta-box">
+        <a href="https://chat.whatsapp.com/HZ2hkEG7Kfd9bCIbp7h225" class="btn btn--primary">
+          Entrar no Grupo do Workshop
+        </a>
+      </div>
+
+      <div class="thanks__warning">
+        ⚠️ Entre no grupo agora para garantir sua participação.
+      </div>
+
+      <p class="thanks__text" style="opacity: 0.7; font-style: italic; margin-bottom: 5px;">
+        Prepare-se para transformar seus resultados no salão.
+      </p>
+
+      <div class="thanks__footer">
+        Nos vemos no workshop,
+        <strong>Vanessa Barreto</strong>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+
+</html>
